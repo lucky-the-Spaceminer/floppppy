@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        /* Center the content and apply a simple font style */
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        /* Style the counter display */
+        #counter {
+            font-size: 2em;
+            margin: 20px;
+        }
+        /* Style the button */
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clicker Game</h1>
+    <p>Click the button to increase the score!</p>
+    
+    <!-- Display the counter value -->
+    <div id="counter">0</div>
+    
+    <!-- Button to increase the counter -->
+    <button id="clickButton">Click Me!</button>
+
+    <script>
+        // Ensure the DOM is fully loaded before running the script
+        document.addEventListener("DOMContentLoaded", function() {
+            let score = 0; // Initialize the score variable
+            const counter = document.getElementById("counter"); // Get the counter display element
+            const button = document.getElementById("clickButton"); // Get the button element
+            
+            // Add a click event listener to the button
+            button.addEventListener("click", function() {
+                score++; // Increase the score by 1
+                counter.textContent = score; // Update the counter display
+            });
+        });
+    </script>
+</body>
+</html>
